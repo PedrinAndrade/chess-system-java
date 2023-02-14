@@ -30,7 +30,7 @@ public class Board {
 			throw new BoardException("Position not on the board");
 		}
 		
-		return this.pieces[row][column];
+		return pieces[row][column];
 	}
 	
 	public Piece piece(Position position) {
@@ -38,7 +38,7 @@ public class Board {
 			throw new BoardException("Position not on the board");
 		}
 		
-		return this.pieces[position.getRow()][position.getColumn()];
+		return pieces[position.getRow()][position.getColumn()];
 	}
 	
 	public void placePiece(Piece piece, Position position) {
@@ -46,7 +46,7 @@ public class Board {
 			throw new BoardException("There is already a piece on position " + position);
 		}
 		
-		this.pieces[position.getRow()][position.getColumn()] = piece;
+		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
 	}
 	
@@ -79,7 +79,7 @@ public class Board {
 			throw new BoardException("Position not on the board");
 		}
 		
-		return this.piece(position) != null;
+		return piece(position) != null;
 	}
 	
 }
